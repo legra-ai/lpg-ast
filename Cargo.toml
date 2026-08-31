@@ -1,0 +1,39 @@
+[package]
+name = "lpg-ast"
+version = "0.1.0"
+description = "Language-neutral abstract syntax tree for Labeled Property Graph queries — the shared representation Cypher and GQL parsers lower into"
+authors = ["Jacobus Geluk <jacobus.geluk@dataroad.com>"]
+edition = "2024"
+rust-version = "1.89"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/legra-ai/lpg-ast"
+documentation = "https://docs.rs/lpg-ast"
+readme = "README.md"
+build = "build.rs"
+keywords = ["cypher", "gql", "ast", "property-graph", "parser"]
+categories = ["parser-implementations", "data-structures"]
+include = [
+    "Cargo.toml",
+    "README.md",
+    "LICENSE-APACHE",
+    "LICENSE-MIT",
+    "build.rs",
+    "src/**/*.rs",
+]
+
+[dependencies]
+
+[build-dependencies]
+rhusky = "0.0.6"
+
+[lints.rust]
+missing_docs = "deny"
+unreachable_pub = "deny"
+
+[lints.rustdoc]
+missing_crate_level_docs = "deny"
+broken_intra_doc_links = "deny"
+
+[lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = { level = "deny", priority = -1 }
